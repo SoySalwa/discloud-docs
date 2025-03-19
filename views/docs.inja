@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+     <title> {{ titleName }} </title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#353535]">
+    {% include "../templates/nav.inja" %}
+    	<div>
+	<ul class="bg-[#303030] size-fit rounded-e-xl rounded-t-none text-white p-6">
+		<a class="pl-2 pt-12 pb-20 font-bold text-xl" href="#">👋 Welcome</a>
+	
+	<h3 class="text-gray-400 pt-4">Support</h3>
+		<li class="p-2"><a class="text-sm font-bold pl-6 hover:bg-[#353535]" href="#">Quick Start <i class="fa-solid fa-chevron-right ml-20" style="color: #ffffff;"></i></a></li>
+		<li class="p-2"><a class="text-sm font-bold pl-6" href="#">Classes  <i class="fa-solid fa-chevron-right ml-27" style="color: #ffffff;"></i></a></li>
+		<li class="p-2"><a class="text-sm font-bold pl-6" href="#">Methods  <i class="fa-solid fa-chevron-right ml-24" style="color: #ffffff;"></i></a></li>
+	</ul>
+	</div>
+	<section class="bg-[#303030] text-white mx-65 size-auto">
+		Section One
+	</section>
+<script src="https://kit.fontawesome.com/f78218491b.js" crossorigin="anonymous"></script>
+</body>
+</html>

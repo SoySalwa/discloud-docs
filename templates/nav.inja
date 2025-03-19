@@ -1,0 +1,16 @@
+<header class="bg-[#002D57]">
+	  <nav>
+    <ul class="flex p-2 gap-4 items-center">
+    <div class="flex p-2 gap-4 items-center text-2x1">
+		<img class="w-10"src="/images/LogoDiscloud-2.png" alt="Discloud C++"/>
+		<p class="text-2x1 text-white font-bold">Discloud C++</p>
+    </div>
+
+     <li class="text-white font-bold"><a class="hover:text-blue-300"href="/">Home</a></li>
+     <li class="text-white font-bold"><a class="hover:text-blue-300" href="/docs">Docs</a></li>
+     <li class="text-white font-bold"><a class="hover:text-blue-300" href="https://docs.discloud.com/en" target="_blank"> Documentation Official</a></li>
+     <li class="text-white font-bold"><a class="hover:text-blue-300" href="#">View Source</a></li>
+    </ul>
+  </nav>
+</header
+

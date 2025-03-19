@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+     <title> {{ titleName }} </title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#353535]">
+    {% include "../templates/nav.inja" %}
+    <section>
+      <div class="mt-6 w-140 mx-auto text-white text-center">
+        <div class="w-50 mx-auto mb-6">
+          <img class="w-50"src="/images/LogoDiscloud.png" alt="Discloud Library"/>
+        </div>
+        <h1 class="font-bold text-2xl"> {{ titleName }} </h1>
+        <p><b>Version: </b> {{ version }}</p>
+        <p><b> Description: </b><br/> {{ description }}</p>
+        <p><b>Install it: </b> {{ installation }}</p>
+        <p><b>Prerequisites:</b> {{ prerequisites }}</p>
+        <li>CURL</li>
+        <li>Discloud API</li>
+      </div>
+    </section>
+      <section>
+      <h1 class="text-white text-3x1 font-bold m-4">
+        Quick Start
+      </h1>
+        <p class="text-sm font-medium text-white ml-6">In your application C++ or file main:
+      <div class="text-white w-150 mx-auto mt-10 mb-10">
+         <pre><code class="cpp">{{ code }}</code></pre>
+      </div>
+      <p class="text-white ml-6 mt-5">With this already you've your first project with discloud library C++ working! <br/>
+      For more information detailed continue viewing the documentation here or visite the Discord Server.</a>.</p>
+    <section>
+    <footer class="bg-[#002D57] p-12 mt-5">
+          <div class="flex p-2 gap-4">
+		<img class="w-10"src="/images/LogoDiscloud-2.png" alt="Discloud C++"/>
+		<p class="text-2x1 text-white font-bold">Discloud C++</p>
+    </div>
+
+          <p class="text-white">Developed by <b>SoySalwa</b></p>
+    </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+  </body>
+</html>
