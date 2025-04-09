@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+     <title> {{ titleName }} </title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#353535]">
+    {% include "../templates/nav.html" %}
+
+    <div class="flex flex-col md:flex-row">
+        {% include "../templates/side_bar.html" %}
+      <section class="bg-[#202020] text-white p-4 overflow-auto">
+        <h1 class="font-bold text-4xl pl-4 pt-4">Welcome, you can say hello to your first program with Discloud C++.</h1>
+        <p class="p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. 
+        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. 
+        Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.
+        </p>
+          <h3 class="font-bold text-2xl pl-4">First things first</h3>
+          <h4 class="font-bold text-white/60 text-lg pl-4">We install Discloud C++</h4>
+        <p class="p-4">For starters, you must have Discloud C++ installed in your operative system, if your don’t have installed, install it, 
+        using the next command if your operative system is a distribution Linux as Debian or Fedora. 
+        Also you can to try use it locally.</p>
+
+         <h3 class="font-bold text-base pl-4"><i class="fa-brands fa-fedora fa-xl" style="color: #1b69ee;"></i> If your OS Fedora (.rpm) in the terminal:</h3>
+        <p class="bg-[#303030] rounded-lg m-3 p-3 font-bold max-w-max">sudo dnf install disloud-library</p>
+         <h3 class="font-bold text-base pl-4"><i class="fa-brands fa-debian fa-xl" style="color: #792020;"></i> If your OS is based on Debian (.deb) in the terminal:</h3>
+        <p class="bg-[#303030] rounded-lg m-3 p-3 font-bold max-w-max">sudo apt install disloud-library</p>
+
+        <p class="p-4"><b>Note: </b>If some of these isn’t your operative system, you must to compile the source code for yourself. 
+In the future i wait is to able to facilitate this process for another operatives systems, if you’ve issues compiling the project, 
+you can join to the discord server for help you with this.</p>
+
+      <h3 class="font-bold text-2xl pl-4">Once installed:</h3>
+        <p class="p-4">There's than to add the header discloud, for do it, we must have <b class="bg-[#303030] rounded-md p-1 font-bold max-w-max">#include &ltdiscloud.h&gt</b>, 
+          it's what make the request from all program, without this included our program it's not working.
+        </p>
+        <p class="p-4 pt-0">Also you must to remember than a program C++ always starters with a function int main, once we know this, our
+        program would be:</p>
+        <div class="text-white max-w-4xl mx-auto">
+  <pre class="p-4 rounded-lg overflow-x-auto whitespace-pre-wrap">
+    <code class="cpp">{{ code }}</code>
+  </pre>
+</div>
+<p>Our code would be something as this, the program needs the access token for to can work, so you must to request one.</p>
+      </section>
+    </div>
+    {% include "../templates/footer.html" %}
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
+<script src="https://kit.fontawesome.com/f78218491b.js" crossorigin="anonymous"></script>
+</body>
+</html>

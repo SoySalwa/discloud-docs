@@ -1,0 +1,33 @@
+
+<header class="bg-[#002D57]">
+  <nav class="flex justify-between items-center p-4">
+    <!-- Logo y título -->
+    <div class="flex items-center gap-4">
+      <img class="w-10" src="/images/LogoDiscloud.png" alt="Discloud C++"/>
+      <p class="text-2xl text-white font-bold">Discloud C++</p>
+    </div>
+
+     <ul class="hidden md:flex gap-6">
+      <li><a class="text-white font-bold hover:text-blue-300" href="/">Home</a></li>
+      <li><a class="text-white font-bold hover:text-blue-300" href="/docs">Docs</a></li>
+      <li><a class="text-white font-bold hover:text-blue-300" href="https://docs.discloud.com/en" target="_blank">Documentation Official</a></li>
+      <li><a class="text-white font-bold hover:text-blue-300" target="_blank" href="https://github.com/soysalwa/discloud-lib">View Source</a></li>
+    </ul>
+
+     <button id="menu-btn" class="md:hidden text-white text-3xl">&#9776;</button>
+  </nav>
+
+  <ul id="mobile-menu" class="hidden flex flex-col bg-[#002D57] p-4 md:hidden">
+    <li><a class="text-white font-bold hover:text-blue-300 block py-2" href="/">Home</a></li>
+    <li><a class="text-white font-bold hover:text-blue-300 block py-2" href="/docs">Docs</a></li>
+    <li><a class="text-white font-bold hover:text-blue-300 block py-2" href="https://docs.discloud.com/en" target="_blank">Documentation Official</a></li>
+    <li><a class="text-white font-bold hover:text-blue-300 block py-2" target="_blank" href="https://github.com/soysalwa/discloud-lib">View Source</a></li>
+  </ul>
+
+  <script>
+    document.getElementById("menu-btn").addEventListener("click", function() {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+  </script>
+</header>
+

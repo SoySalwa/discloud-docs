@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+     <title> {{ titleName }} </title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#353535]">
+    {% include "../templates/nav.html" %}
+   
+<section class="py-10">
+  <div class="mt-2 container mx-auto text-white text-center px-4">
+    <div class="max-w-sm md:max-w-lg lg:max-w-2xl mx-auto">
+      <div class="mb-6 flex justify-center">
+        <img class="max-w-[200px] w-full" src="/images/LogoDiscloud.png" alt="Discloud Library"/>
+      </div>
+      <h1 class="m-4 font-bold text-2xl md:text-3xl"> {{ titleName }} </h1>
+      <p class="mt-2"><b>Version: </b> {{ version }}</p>
+      <p class="mt-2"><b>Description: </b><br/> {{ description }}</p>
+      <p class="mt-2"><b>Install it: </b> {{ installation }}</p>
+      <p class="mt-2"><b>Prerequisites: </b> {{ prerequisites }}</p>
+    </div>
+  </div>
+</section>
+<section>
+      <h1 class="text-white text-3xl font-bold m-4">Quick Start</h1>
+      <p class="text-base font-medium text-white ml-6">In your application C++ or file main:
+
+<div class="text-white max-w-4xl mx-auto px-4">
+  <pre class="p-4 rounded-lg overflow-x-auto whitespace-pre-wrap">
+    <code class="cpp">{{ code }}</code>
+  </pre>
+</div>
+      <p class="text-white ml-6 mb-3">With this already you've your first project with discloud library C++ working! <br/>
+      For more information detailed continue viewing the documentation here or visite the Discord Server.</a>.</p>
+    </section>
+    {% include "../templates/footer.html" %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

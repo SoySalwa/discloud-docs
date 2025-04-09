@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+     <title> {{ titleName }} </title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#353535]">
+    {% include "../templates/nav.html" %}
+
+   <div class="flex flex-col md:flex-row">
+        {% include "../templates/side_bar.html" %}
+	<section class="bg-[#202020] text-white p-2 overflow-auto">
+    <h1 class="font-bold text-4xl pl-4 pt-4">👋 Welcome</h1>
+    <h4 class="font-bold text-white/60 text-sm pl-4 pt-1">Welcome to the documentation from Discloud Library C++</h4>
+
+      <p class="p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. 
+        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. 
+        Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.
+      </p>
+    
+    <h1 class="flex gap-2 font-bold text-2xl pl-4"><img src="/images/discloudcpp-book.png" alt="discloudcpp-book"/> About the documentation</h1>
+
+        <div class="m-4 rounded-[4px] border-2 border-black">
+       <div class="spoiler-header border-b-2 border-black p-4 cursor-pointer" data-spoiler-id="1">
+        <i class="spoiler-icon fa-solid mr-4 {% if show %}fa-chevron-down{% else %}fa-chevron-right{% endif %}"
+           style="color: #ffffff;"></i>
+        <span class="text-white font-bold">📖 Objectives</span>
+    </div>
+
+            <div class="spoiler-content border-b-2 border-black  p-4 {% if show %} block{% else %} hidden {% endif%}">
+        <p class="text-white">This documentation has as objective help to understand this tool in C++ project. Anyway the
+            intention from this documentation is being easy to navigate.</p>
+    </div>
+       <div class="spoiler-header border-b-2 border-black p-4 cursor-pointer" data-spoiler-id="2">
+        <i class="spoiler-icon fa-solid mr-4 {% if show %}fa-chevron-down{% else %}fa-chevron-right{% endif %}"></i>
+          <span class="text-white font-bold">📑 Comprehensive</span>
+        </div>
+             <div class="spoiler-content border-b-2 border-black  p-4 {% if show %} block{% else %} hidden {% endif%}">
+        <p class="text-white">Discloud C++ Docs has all the essential aspects to help you make the most of the tool
+            so as initial setup and no matter what you aim to achieve with Discloud C++, our documentation is 
+            here to guide you.</p>
+    </div>
+
+          <div class="spoiler-header border-b-2 border-black p-4 cursor-pointer" data-spoiler-id="3">
+        <i class="spoiler-icon fa-solid mr-4 {% if show %}fa-chevron-down{% else %}fa-chevron-right{% endif %}"></i>
+          <span class="text-white font-bold">📋 Accesible</span>
+        </div>
+             <div class="spoiler-content border-b-2 border-black p-4 {% if show %} block{% else %} hidden {% endif%}">
+        <p class="text-white">My documentation is designed to be simple. I aim to ensure that you can quickly
+            find the information you need, as well as each piece of data in the tool with its respective information and use.</p>
+    </div>
+
+       <div class="spoiler-header border-b-2 border-black p-4 cursor-pointer" data-spoiler-id="4">
+        <i class="spoiler-icon fa-solid mr-4 {% if show %}fa-chevron-down{% else %}fa-chevron-right{% endif %}"></i>
+          <span class="text-white font-bold">⭐ highlighted Content</span>
+        </div>
+             <div class="spoiler-content  border-b-2 border-black p-4 {% if show %} block{% else %} hidden {% endif%}">
+        <p class="text-white"><ul class="pl-6 list-disc">
+          <li><b>Usage Examples: </b>Explore examples of how to use Discloud C++ features in your projects.</li>
+               <li><b>Updates and News: </b> Stay up to date with the latest feauture updates, improvements, and news from Discloud C++.</li>
+        </ul></p>
+    </div>
+
+      </div>      <h1 class="font-bold text-2xl pl-4"><i class="fa-solid fa-address-book" style="color: #FFD43B;"></i> Contact me</h1>
+
+      <p class="p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. 
+        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. 
+        Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.</p>	
+<div class="flex justify-center items-center px-4">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-y-8 md:gap-x-20 text-center">
+    <div class="text-xl text-[#4258E5]">
+      <a href="https://github.com/soysalwa/discloud-lib" target="_blank" class="font-bold flex flex-col items-center">
+        <i class="fa-brands fa-github text-4xl"></i>
+        <span>GitHub</span>
+      </a>
+      <p class="text-white text-base mt-2">Contribute to my project in GitHub.</p>
+    </div>
+    <div class="text-xl text-[#4258E5]">
+      <a href="https://discord.com" target="_blank" class="font-bold flex flex-col items-center">
+        <i class="fa-brands fa-discord text-4xl"></i>
+        <span>Discord</span>
+      </a>
+      <p class="text-white text-base mt-2">Join my Discord server.</p>
+    </div>
+  </div>
+</div>
+        {% include "../templates/pagination.html"%}
+      </section>
+</div>
+             {% include "../templates/footer.html" %}
+
+     <script>
+async function toggleSpoiler(headerElement) {
+    try {
+        const spoilerId = headerElement.dataset.spoilerId;
+        const content = headerElement.nextElementSibling;
+        const icon = headerElement.querySelector('.spoiler-icon');
+        
+        const isCurrentlyHidden = content.classList.contains('hidden');
+        const newState = !isCurrentlyHidden;
+        
+        content.classList.toggle('hidden', !newState);
+        content.classList.toggle('block', newState);
+        icon.classList.toggle('fa-chevron-down', newState);
+        icon.classList.toggle('fa-chevron-right', !newState);
+        
+        const response = await fetch('/toggle_spoiler', {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ spoiler_id: spoilerId })
+        });
+        
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        
+        const data = await response.json();
+        console.log("Estado confirmado:", data.show);
+
+        content.classList.toggle('hidden', !data.show);
+        content.classList.toggle('block', data.show);
+        icon.classList.toggle('fa-chevron-down', data.show);
+        icon.classList.toggle('fa-chevron-right', !data.show);
+        
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Error al cambiar estado. Recarga la página.");
+    }
+}
+
+// Inicialización (para múltiples spoilers)
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.spoiler-header').forEach(header => {
+        // Asignar evento a cada header
+        header.addEventListener("click", () => toggleSpoiler(header));
+        
+        // Inicialización segura
+        const content = header.nextElementSibling;
+        const icon = header.querySelector('.spoiler-icon');
+        
+        if (!content.classList.contains('hidden')) {
+            content.classList.add('hidden');
+            content.classList.remove('block');
+            icon.classList.add('fa-chevron-right');
+            icon.classList.remove('fa-chevron-down');
+        }
+    });
+});
+</script>
+<script src="https://kit.fontawesome.com/f78218491b.js" crossorigin="anonymous"></script>
+</body>
+</html>

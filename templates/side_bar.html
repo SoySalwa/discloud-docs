@@ -1,0 +1,88 @@
+
+<div class="md:hidden bg-[#202020] text-white items-center p-4 w-full top-0 z-50">
+       <!-- Botón para abrir/cerrar sidebar en móviles (ahora debajo del header) -->
+  <button id="menu-toggle" class="p-2">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</div>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="bg-[#202020] overflow-auto w-120 text-white p-6 md:relative fixed z-40
+      transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out text-white">    
+    <a class="block pl-2 pt-4 pb-4 font-bold text-xl hover:bg-[#353535] rounded-md p-2" href="/welcome">
+      👋 Welcome
+    </a>
+
+    <h3 class="font-bold text-gray-400 pt-4">Support</h3>
+
+    <!-- Quick Start -->
+    <ul class="list-none">
+      <li class="p-2 spoiler-container">
+        <a data-link-bar="1" class=" text-sm font-bold flex justify-between items-center hover:bg-[#353535] rounded-md p-2 link-spoiler">
+          Quick Start
+          <i class="link-icon fa-solid fa-chevron-right text-white"></i>
+        </a>
+        <ul class="link-content hidden pl-6 list-none">
+          <li class="p-2"><a href="/docs/your-first-program" class="text-sm hover:bg-[#353535] rounded-md p-2 block">Your first program</a></li>
+          <li class="p-2"><a href="#" class="text-sm hover:bg-[#353535] rounded-md p-2 block">How to use</a></li>
+        </ul>
+      </li>
+
+      <!-- Classes -->
+      <li class="p-2 spoiler-container">
+        <a data-link-bar="2" class="link-spoiler text-sm font-bold flex justify-between items-center hover:bg-[#353535] rounded-md p-2" href="#">
+          Classes
+          <i class="link-icon fa-solid fa-chevron-right text-white"></i>
+        </a>
+        <ul class="link-content hidden pl-6 list-none">
+          <li class="p-2"><a href="#" class="text-sm hover:bg-[#353535] rounded-md p-2 block">application</a></li>
+          <li class="p-2"><a href="#" class="text-sm hover:bg-[#353535] rounded-md p-2 block">user</a></li>
+           <li class="p-2"><a href="#" class="text-sm hover:bg-[#353535] rounded-md p-2 block">upload</a></li>
+          </ul>
+      </li>
+
+      <!-- Methods -->
+      <li class="p-2 spoiler-container">
+        <a data-link-bar="3" class="link-spoiler text-sm font-bold flex justify-between items-center hover:bg-[#353535] rounded-md p-2" href="#">
+          Methods
+          <i class="link-icon fa-solid fa-chevron-right text-white"></i>
+        </a>
+        <ul class="link-content hidden pl-6 list-none">
+          <li class="p-2"><a href="#" class="text-sm hover:bg-[#353535] rounded-md p-2 block">Sub Link 1</a></li>
+          <li class="p-2"><a href="#" class="text-sm hover:bg-[#353535] rounded-md p-2 block">Sub Link 2</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+<script>
+// Elementos del sidebar
+const sidebar = document.getElementById("sidebar");
+const menuToggle = document.getElementById("menu-toggle");
+//const overlay = document.getElementById("overlay");
+
+// Abrir / cerrar sidebar en móviles
+function toggleSidebar() {
+  sidebar.classList.toggle("translate-x-0");
+ // overlay.classList.toggle("hidden");
+}
+
+// Eventos para el botón y el overlay
+menuToggle.addEventListener("click", toggleSidebar);
+//overlay.addEventListener("click", toggleSidebar);
+
+// Función para manejar la expansión de los submenús
+document.querySelectorAll(".link-spoiler").forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+    
+    const container = link.closest("li");
+    const content = container.querySelector(".link-content");
+    const icon = link.querySelector(".link-icon");
+    
+    content.classList.toggle("hidden");
+    icon.classList.toggle("fa-chevron-right");
+    icon.classList.toggle("fa-chevron-down");
+  });
+});
+</script>
+
